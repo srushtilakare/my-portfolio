@@ -6,7 +6,14 @@ import { motion } from "framer-motion";
 
 import Tilt from "react-parallax-tilt";
 
+import { useState } from "react";
+
+import ProjectModal from "../components/ProjectModal";
+
 function Projects() {
+
+  const [selectedProject, setSelectedProject] =
+    useState(null);
 
   return (
 
@@ -43,6 +50,7 @@ function Projects() {
               tiltMaxAngleY={8}
 
               glareEnable={true}
+
               glareMaxOpacity={0.2}
 
               scale={1.02}
@@ -51,11 +59,16 @@ function Projects() {
             >
 
               <motion.div
+
                 className="project-card"
 
                 whileHover={{
                   y: -10
                 }}
+
+                onClick={() =>
+                  setSelectedProject(project)
+                }
               >
 
                 {/* GLOW */}
@@ -73,7 +86,7 @@ function Projects() {
                     </h3>
 
                     <p className="project-sub">
-                      {project.subtitle}
+                      {project.category}
                     </p>
 
                   </div>
@@ -94,7 +107,18 @@ function Projects() {
 
                     <div className="mockup-content">
 
-                      <div className="graph"></div>
+                      <div
+                        className="graph"
+
+                        style={{
+                          background:
+                            `linear-gradient(
+                              135deg,
+                              ${project.color}55,
+                              rgba(123,47,247,0.2)
+                            )`
+                        }}
+                      ></div>
 
                       <div className="small-cards">
 
@@ -110,23 +134,27 @@ function Projects() {
 
                 </div>
 
-                {/* DESCRIPTION */}
+                {/* SHORT DESCRIPTION */}
 
                 <p className="project-description">
-                  {project.description}
+
+                  {project.shortDescription}
+
                 </p>
 
                 {/* TECH STACK */}
 
                 <div className="tech-stack">
 
-                  {project.tech.map((tech, index) => (
+                  {project.tech.slice(0, 4).map(
+                    (tech, index) => (
 
-                    <span key={index}>
-                      {tech}
-                    </span>
+                      <span key={index}>
+                        {tech}
+                      </span>
 
-                  ))}
+                    )
+                  )}
 
                 </div>
 
@@ -134,42 +162,34 @@ function Projects() {
 
                 <div className="project-stats">
 
-                  <div>
-                    <h4>
-                      {project.stats.accuracy}
-                    </h4>
+                  {Object.entries(project.stats)
+                    .slice(0, 3)
+                    .map(([key, value], index) => (
 
-                    <p>Accuracy</p>
-                  </div>
+                      <div key={index}>
 
-                  <div>
-                    <h4>
-                      {project.stats.speed}
-                    </h4>
+                        <h4>
+                          {value}
+                        </h4>
 
-                    <p>Speed</p>
-                  </div>
+                        <p>
+                          {key}
+                        </p>
 
-                  <div>
-                    <h4>
-                      {project.stats.users}
-                    </h4>
+                      </div>
 
-                    <p>Users</p>
-                  </div>
+                    ))}
 
                 </div>
 
-                {/* BUTTONS */}
+                {/* BUTTON */}
 
                 <div className="project-buttons">
 
                   <button className="primary-btn">
-                    View Project
-                  </button>
 
-                  <button className="secondary-btn">
-                    GitHub
+                    Explore Project
+
                   </button>
 
                 </div>
@@ -183,6 +203,18 @@ function Projects() {
         </div>
 
       </div>
+
+      {/* PROJECT MODAL */}
+
+      <ProjectModal
+
+        project={selectedProject}
+
+        closeModal={() =>
+          setSelectedProject(null)
+        }
+
+      />
 
     </section>
 

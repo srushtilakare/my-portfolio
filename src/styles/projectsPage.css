@@ -1,0 +1,314 @@
+.innovation-page {
+
+    min-height: 100vh;
+  
+    padding: 140px 5%;
+  
+    position: relative;
+  
+    overflow: hidden;
+  }
+  
+  /* HERO */
+  
+  .innovation-hero {
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    gap: 80px;
+  
+    min-height: 85vh;
+  }
+  
+  /* LEFT */
+  
+  .innovation-content {
+  
+    flex: 1;
+  
+    max-width: 700px;
+  }
+  
+  .innovation-subtitle {
+  
+    color: var(--primary-color);
+  
+    letter-spacing: 3px;
+  
+    margin-bottom: 20px;
+  }
+  
+  .innovation-content h1 {
+  
+    font-size: 6rem;
+  
+    line-height: 1;
+  
+    margin-bottom: 30px;
+  }
+  
+  .innovation-description {
+  
+    color: var(--gray-text);
+  
+    line-height: 1.9;
+  
+    font-size: 1.1rem;
+  
+    margin-bottom: 40px;
+  
+    max-width: 600px;
+  }
+  
+  .innovation-buttons {
+  
+    display: flex;
+  
+    gap: 20px;
+  }
+  
+  /* RIGHT */
+  
+  .innovation-visual {
+  
+    flex: 1;
+  
+    position: relative;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    min-height: 600px;
+  }
+  
+  /* GLOW */
+  
+  .visual-glow {
+  
+    position: absolute;
+  
+    width: 400px;
+    height: 400px;
+  
+    background: rgba(0,240,255,0.15);
+  
+    border-radius: 50%;
+  
+    filter: blur(120px);
+  }
+  
+  /* MAIN PANEL */
+  
+  .main-panel {
+  
+    width: 450px;
+  
+    border-radius: 30px;
+  
+    overflow: hidden;
+  
+    background: rgba(255,255,255,0.05);
+  
+    border: 1px solid rgba(255,255,255,0.08);
+  
+    backdrop-filter: blur(20px);
+  
+    position: relative;
+  
+    z-index: 2;
+  
+    animation: floatPanel 5s ease-in-out infinite;
+  }
+  
+  .panel-top {
+  
+    height: 50px;
+  
+    display: flex;
+    align-items: center;
+  
+    gap: 10px;
+  
+    padding: 0 20px;
+  
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  
+    background: rgba(255,255,255,0.03);
+  }
+  
+  .panel-top span {
+  
+    width: 12px;
+    height: 12px;
+  
+    border-radius: 50%;
+  
+    background: rgba(255,255,255,0.4);
+  }
+  
+  .panel-content {
+  
+    padding: 30px;
+  }
+  
+  .panel-graph {
+  
+    height: 220px;
+  
+    border-radius: 20px;
+  
+    background:
+      linear-gradient(
+        135deg,
+        rgba(0,240,255,0.2),
+        rgba(123,47,247,0.2)
+      );
+  
+    margin-bottom: 25px;
+  }
+  
+  .panel-stats {
+  
+    display: flex;
+  
+    gap: 15px;
+  }
+  
+  .panel-stats div {
+  
+    flex: 1;
+  
+    height: 80px;
+  
+    border-radius: 20px;
+  
+    background: rgba(255,255,255,0.05);
+  }
+  
+  /* FLOATING CARDS */
+  
+  .floating-card {
+  
+    position: absolute;
+  
+    padding: 20px 25px;
+  
+    border-radius: 20px;
+  
+    background: rgba(255,255,255,0.05);
+  
+    border: 1px solid rgba(255,255,255,0.08);
+  
+    backdrop-filter: blur(20px);
+  
+    z-index: 5;
+  
+    animation: floatCard 6s ease-in-out infinite;
+  }
+  
+  .floating-card p {
+  
+    color: var(--gray-text);
+  
+    margin-bottom: 10px;
+  }
+  
+  .floating-card h3 {
+  
+    font-size: 2rem;
+  
+    color: var(--primary-color);
+  }
+  
+  .card-1 {
+  
+    top: 50px;
+    left: 0;
+  }
+  
+  .card-2 {
+  
+    bottom: 80px;
+    left: 30px;
+  }
+  
+  .card-3 {
+  
+    top: 120px;
+    right: 0;
+  }
+  
+  /* ANIMATIONS */
+  
+  @keyframes floatPanel {
+  
+    0% {
+      transform: translateY(0px);
+    }
+  
+    50% {
+      transform: translateY(-15px);
+    }
+  
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  @keyframes floatCard {
+  
+    0% {
+      transform: translateY(0px);
+    }
+  
+    50% {
+      transform: translateY(-10px);
+    }
+  
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  /* RESPONSIVE */
+  
+  @media (max-width: 1100px) {
+  
+    .innovation-hero {
+  
+      flex-direction: column;
+  
+      text-align: center;
+    }
+  
+    .innovation-buttons {
+  
+      justify-content: center;
+    }
+  
+    .innovation-content h1 {
+  
+      font-size: 4rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+  
+    .innovation-content h1 {
+  
+      font-size: 3rem;
+    }
+  
+    .main-panel {
+  
+      width: 100%;
+    }
+  
+    .floating-card {
+  
+      display: none;
+    }
+  }
