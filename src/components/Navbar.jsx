@@ -1,19 +1,54 @@
 import "../styles/navbar.css";
 
+import { Link } from "react-router-dom";
+
 function Navbar() {
+
   return (
+
     <nav className="navbar">
-      <div className="nav-logo">
+
+      <Link
+        to="/"
+        className="nav-logo"
+      >
         Srushti<span>AI</span>
-      </div>
+      </Link>
 
       <ul className="nav-links">
-        <li>Home</li>
-        <li>Projects</li>
-        <li>Skills</li>
-        <li>Research</li>
-        <li>Contact</li>
+
+        <li>
+          <Link to="/">
+            Home
+          </Link>
+        </li>
+
+        <li>
+          <Link to="/skills">
+            Skills
+          </Link>
+        </li>
+
+        <li>
+          <Link to="/projects">
+            Projects
+          </Link>
+        </li>
+
+        <li>
+          <Link to="/research">
+            Research
+          </Link>
+        </li>
+
+        <li>
+          <Link to="/contact">
+            Contact
+          </Link>
+        </li>
+
       </ul>
+
     </nav>
   );
 }
