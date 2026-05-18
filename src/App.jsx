@@ -1,9 +1,15 @@
+import Navbar from "./components/Navbar";
+import BackgroundGlow from "./components/BackgroundGlow";
+import Hero from "./sections/Hero";
+
 function App() {
   return (
     <>
-      <h1>Hello Srushti 🚀</h1>
+      <BackgroundGlow />
+      <Navbar />
+      <Hero />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

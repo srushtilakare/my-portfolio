@@ -1,0 +1,87 @@
+.hero {
+    min-height: 100vh;
+  
+    display: flex;
+    align-items: center;
+  
+    padding: 0 5%;
+  
+    position: relative;
+  }
+  
+  .hero-content {
+    max-width: 800px;
+  }
+  
+  .hero-subtitle {
+    color: var(--primary-color);
+  
+    margin-bottom: 20px;
+  
+    letter-spacing: 2px;
+  
+    text-transform: uppercase;
+  }
+  
+  .hero h1 {
+    font-size: 5rem;
+    line-height: 1.1;
+  
+    margin-bottom: 25px;
+  }
+  
+  .hero-description {
+    color: var(--gray-text);
+  
+    font-size: 1.1rem;
+  
+    line-height: 1.8;
+  
+    max-width: 600px;
+  
+    margin-bottom: 40px;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .primary-btn,
+  .secondary-btn {
+    padding: 15px 30px;
+  
+    border-radius: 50px;
+  
+    font-size: 1rem;
+  
+    transition: var(--transition);
+  }
+  
+  .primary-btn {
+    background: linear-gradient(
+      135deg,
+      #00f0ff,
+      #7b2ff7
+    );
+  
+    color: white;
+  }
+  
+  .primary-btn:hover {
+    transform: translateY(-3px);
+  }
+  
+  .secondary-btn {
+    background: transparent;
+  
+    border: 1px solid rgba(255,255,255,0.2);
+  
+    color: white;
+  }
+  
+  .secondary-btn:hover {
+    border-color: var(--primary-color);
+  
+    color: var(--primary-color);
+  }
