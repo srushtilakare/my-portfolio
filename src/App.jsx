@@ -1,12 +1,7 @@
-import { useState } from 'react'
-
-
 function App() {
-   
-
   return (
     <>
-       
+      <h1>Hello Srushti 🚀</h1>
     </>
   )
 }

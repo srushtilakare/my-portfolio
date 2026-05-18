@@ -1,0 +1,93 @@
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg-color: #050816;
+  --primary-color: #00f0ff;
+  --secondary-color: #7b2ff7;
+  --text-color: #ffffff;
+  --gray-text: #b5b5b5;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --border-color: rgba(255, 255, 255, 0.1);
+
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050816;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    to bottom,
+    #00f0ff,
+    #7b2ff7
+  );
+  border-radius: 20px;
+}
+
+/* SELECTION */
+
+::selection {
+  background: #00f0ff;
+  color: #050816;
+}
+
+/* REUSABLE CONTAINER */
+
+.container {
+  width: 90%;
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* GLOW EFFECT */
+
+.glow {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: #00f0ff;
+  filter: blur(180px);
+  opacity: 0.15;
+  z-index: -1;
+}
