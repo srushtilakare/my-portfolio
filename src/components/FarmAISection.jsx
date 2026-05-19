@@ -4,35 +4,35 @@ import { motion } from "framer-motion";
 
 /* IMAGES */
 
-import farmai1 from "../assets/images/farmai1.png";
-import farmai2 from "../assets/images/farmai2.png";
-import farmai3 from "../assets/images/farmai3.png";
-import farmai4 from "../assets/images/farmai4.png";
-import farmai5 from "../assets/images/farmai5.png";
-import farmai6 from "../assets/images/farmai6.png";
-import farmai7 from "../assets/images/farmai7.png";
-import farmai8 from "../assets/images/farmai8.png";
-import farmai9 from "../assets/images/farmai9.png";
-import farmai10 from "../assets/images/farmai10.png";
-import farmai11 from "../assets/images/farmai11.png";
-import farmai12 from "../assets/images/farmai12.png";
-import farmai13 from "../assets/images/farmai13.png";
-import farmai14 from "../assets/images/farmai14.png";
-import farmai15 from "../assets/images/farmai15.png";
-import farmai16 from "../assets/images/farmai16.png";
-import farmai17 from "../assets/images/farmai17.png";
-import farmai18 from "../assets/images/farmai18.png";
-import farmai19 from "../assets/images/farmai19.png";
-import farmai20 from "../assets/images/farmai20.png";
-import farmai21 from "../assets/images/farmai21.png";
-import farmai22 from "../assets/images/farmai22.png";
-import farmai23 from "../assets/images/farmai23.png";
-import farmai24 from "../assets/images/farmai24.png";
-import farmai25 from "../assets/images/farmai25.png";
-import farmai26 from "../assets/images/farmai26.png";
-import farmai27 from "../assets/images/farmai27.png";
-import farmai28 from "../assets/images/farmai28.png";
-import farmai29 from "../assets/images/farmai29.png";
+import farmai1 from "../assets/images/farmai 1.png";
+import farmai2 from "../assets/images/farmai 2.png";
+import farmai3 from "../assets/images/farmai 3.png";
+import farmai4 from "../assets/images/farmai 4.png";
+import farmai5 from "../assets/images/farmai 5.png";
+import farmai6 from "../assets/images/farmai 6.png";
+import farmai7 from "../assets/images/farmai 7.png";
+import farmai8 from "../assets/images/farmai 8.png";
+import farmai9 from "../assets/images/farmai 9.png";
+import farmai10 from "../assets/images/farmai 10.png";
+import farmai11 from "../assets/images/farmai 11.png";
+import farmai12 from "../assets/images/farmai 12.png";
+import farmai13 from "../assets/images/farmai 13.png";
+import farmai14 from "../assets/images/farmai 14.png";
+import farmai15 from "../assets/images/farmai 15.png";
+import farmai16 from "../assets/images/farmai 16.png";
+import farmai17 from "../assets/images/farmai 17.png";
+import farmai18 from "../assets/images/farmai 18.png";
+import farmai19 from "../assets/images/farmai 19.png";
+import farmai20 from "../assets/images/farmai 20.png";
+import farmai21 from "../assets/images/farmai 21.png";
+import farmai22 from "../assets/images/farmai 22.png";
+import farmai23 from "../assets/images/farmai 23.png";
+import farmai24 from "../assets/images/farmai 24.png";
+import farmai25 from "../assets/images/farmai 25.png";
+import farmai26 from "../assets/images/farmai 26.png";
+import farmai27 from "../assets/images/farmai 27.png";
+import farmai28 from "../assets/images/farmai 28.png";
+import farmai29 from "../assets/images/farmai 29.png";
 
 function FarmAISection() {
 

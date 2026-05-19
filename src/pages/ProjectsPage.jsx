@@ -1,5 +1,9 @@
 import "../styles/projectsPage.css";
 import FarmAISection from "../components/FarmAISection";
+import FakeReviewSection from "../components/FakeReviewSection";
+import FakeNewsSection from "../components/FakeNewsSection";
+import PCOSSection from "../components/PCOSSection";
+import PotholeSection from "../components/PotholeSection";
 
 import { motion } from "framer-motion";
 
@@ -186,6 +190,10 @@ function ProjectsPage() {
       </div>
 
       <FarmAISection />
+      <FakeReviewSection />
+      <FakeNewsSection />
+      <PCOSSection />
+      <PotholeSection />
 
     </section>
 

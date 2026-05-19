@@ -117,7 +117,8 @@ const projects = [
       "Ensemble ML models",
       "Sentiment analysis",
       "Interactive dashboard",
-      "Review analytics"
+      "Review analytics",
+      "Government Copyright Registered"
 
     ],
 
@@ -153,7 +154,9 @@ const projects = [
       "News Classification",
       "Text Cleaning",
       "Prediction Engine",
-      "Content Analysis"
+      "Content Analysis",
+      "Prediction History",
+      "Dashboard Analytics"
 
     ],
 
@@ -171,7 +174,9 @@ const projects = [
       "Fake news prediction",
       "Text preprocessing",
       "NLP pipeline",
-      "Fast prediction system"
+      "Fast prediction system",
+      "Dashboard analytics",
+      "Prediction history"
 
     ],
 
@@ -187,49 +192,114 @@ const projects = [
       "AI Healthcare Prediction",
 
     shortDescription:
-      "AI-powered healthcare prediction system for early PCOS detection using machine learning.",
+      "AI-powered healthcare platform using Random Forest and YOLO models for intelligent PCOS detection.",
 
     description:
-      "A healthcare-focused machine learning project that predicts PCOS risks using patient health data and intelligent prediction algorithms.",
+      "A healthcare-focused AI platform integrating Random Forest prediction and YOLO-based ultrasound image detection for accurate PCOS diagnosis and report generation.",
 
     tech: [
 
       "Python",
       "Machine Learning",
+      "YOLO",
       "Flask",
       "React",
-      "Pandas"
+      "Pandas",
+      "Computer Vision"
 
     ],
 
     modules: [
 
+      "Random Forest Prediction",
+      "YOLO Ultrasound Detection",
       "Health Data Analysis",
-      "Prediction System",
-      "Risk Assessment",
-      "Report Generation"
+      "Detection Analytics",
+      "Report Generation",
+      "Patient Profile System"
 
     ],
 
     stats: {
 
-      accuracy: "90%",
-      patients: "10K+",
-      models: "3",
+      accuracy: "95%",
+      models: "2",
+      reports: "5K+",
       speed: "1.1s"
 
     },
 
     features: [
 
-      "Early prediction",
-      "Health analytics",
-      "ML-based risk analysis",
-      "Interactive reports"
+      "Dual-model AI system",
+      "YOLO image detection",
+      "Medical report generation",
+      "Downloadable reports",
+      "Healthcare analytics",
+      "Profile management"
 
     ],
 
     color: "#ff4ecd"
+  },
+
+  {
+    id: 5,
+
+    title: "Pothole Detection System",
+
+    category:
+      "AI Smart Road Monitoring",
+
+    shortDescription:
+      "Real-time pothole detection system using YOLOv8 and YOLOv26 object detection models.",
+
+    description:
+      "An advanced computer vision project developed for intelligent pothole detection using YOLO models with live camera detection and uploaded video analysis capabilities.",
+
+    tech: [
+
+      "Python",
+      "YOLOv8",
+      "YOLOv26",
+      "OpenCV",
+      "Computer Vision",
+      "Deep Learning"
+
+    ],
+
+    modules: [
+
+      "Live Camera Detection",
+      "Video Upload Detection",
+      "Road Damage Analysis",
+      "Object Detection",
+      "Model Comparison",
+      "Real-Time Monitoring"
+
+    ],
+
+    stats: {
+
+      accuracy: "80%",
+      models: "2",
+      realtime: "YES",
+      map: "80 mAP"
+
+    },
+
+    features: [
+
+      "YOLOv8 training",
+      "YOLOv26 optimization",
+      "Live AI detection",
+      "Video-based analysis",
+      "Real-time processing",
+      "Smart city monitoring"
+
+    ],
+
+    color: "#ff8c00"
   }
 
 ];
