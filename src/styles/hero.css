@@ -1,11 +1,9 @@
-/* HERO */
+/* ================= HERO ================= */
 
 .hero {
+  min-height: 100vh;
 
-  min-height: 85vh;
-
-  padding:
-    140px 7% 60px;
+  padding: 140px 7% 80px;
 
   display: flex;
 
@@ -13,224 +11,354 @@
 
   align-items: center;
 
-  gap: 60px;
+  gap: 80px;
 
   position: relative;
+
+  overflow: hidden;
 }
 
-/* LEFT */
+/* ================= LEFT ================= */
 
-.hero-content{
+.hero-content {
+  flex: 1;
 
-  flex:1;
-
-  z-index:5;
+  z-index: 5;
 }
 
-.hero-subtitle{
+.hero-subtitle {
+  color: #00f0ff;
 
-  color:#00f0ff;
+  letter-spacing: 3px;
 
-  letter-spacing:3px;
+  margin-bottom: 20px;
 
-  margin-bottom:20px;
+  font-size: 14px;
 
-  font-size:14px;
+  font-weight: 500;
 }
 
-.hero-content h1{
+.hero-content h1 {
+  font-size: 5rem;
 
-  font-size:5rem;
+  line-height: 1.1;
 
-  line-height:1.1;
+  margin-bottom: 20px;
 
-  margin-bottom:20px;
-
-  font-weight:700;
+  font-weight: 700;
 }
 
-.hero-content h1 span{
-
-  color:#00f0ff;
+.hero-content h1 span {
+  color: #00f0ff;
 }
 
-.typing-container{
+/* ================= TYPING ================= */
 
-  margin-bottom:30px;
+.typing-container {
+  margin-bottom: 30px;
+
+  min-height: 45px;
 }
 
-.typing-text{
+.typing-text {
+  font-size: 1.5rem;
 
-  font-size:1.5rem;
+  color: #7b2ff7;
 
-  color:#7b2ff7;
-
-  font-weight:600;
+  font-weight: 600;
 }
 
-.hero-description{
+/* ================= DESCRIPTION ================= */
 
-  max-width:650px;
+.hero-description {
+  max-width: 650px;
 
-  line-height:1.9;
+  line-height: 1.9;
 
-  color:#bcbcbc;
+  color: #bcbcbc;
 
-  font-size:1.1rem;
+  font-size: 1.05rem;
 
-  margin-bottom:40px;
+  margin-bottom: 40px;
 }
 
-/* BUTTON */
+/* ================= BUTTON ================= */
 
-.hero-buttons{
+.hero-buttons {
+  display: flex;
 
-  display:flex;
+  gap: 20px;
 
-  gap:20px;
+  flex-wrap: wrap;
 }
 
-.primary-btn{
+.primary-btn {
+  padding: 16px 34px;
 
-  padding:16px 34px;
+  border-radius: 40px;
 
-  border-radius:40px;
-
-  background:
-  linear-gradient(
+  background: linear-gradient(
     90deg,
     #00f0ff,
     #7b2ff7
   );
 
-  color:white;
+  color: white;
 
-  text-decoration:none;
+  text-decoration: none;
 
-  font-weight:600;
+  font-weight: 600;
 
-  transition:0.3s ease;
+  transition: 0.3s ease;
+
+  display: inline-flex;
+
+  justify-content: center;
+
+  align-items: center;
 }
 
-.primary-btn:hover{
-
-  transform:translateY(-5px);
+.primary-btn:hover {
+  transform: translateY(-5px);
 
   box-shadow:
-  0 10px 30px rgba(0,240,255,0.25);
+    0 10px 30px rgba(0,240,255,0.25);
 }
 
-/* RIGHT */
+/* ================= RIGHT ================= */
 
-.hero-visual{
+.hero-visual {
+  flex: 1;
 
-  flex:1;
+  display: flex;
 
-  display:flex;
+  justify-content: center;
 
-  justify-content:center;
+  align-items: center;
 
-  align-items:center;
-
-  position:relative;
+  position: relative;
 }
 
-/* PROFILE */
+/* ================= PROFILE ================= */
 
-.profile-container{
+.profile-container {
+  width: 420px;
 
-  width:420px;
+  height: 420px;
 
-  height:420px;
+  border-radius: 50%;
 
-  border-radius:50%;
+  overflow: hidden;
 
-  overflow:hidden;
+  border: 4px solid rgba(0,240,255,0.3);
 
-  border:
-  4px solid rgba(0,240,255,0.3);
+  position: relative;
 
-  position:relative;
+  z-index: 5;
 
-  z-index:5;
-
-  backdrop-filter:blur(20px);
+  backdrop-filter: blur(20px);
 
   box-shadow:
-  0 20px 60px rgba(0,240,255,0.2);
+    0 20px 60px rgba(0,240,255,0.2);
+
+  flex-shrink: 0;
 }
 
-.profile-image{
+.profile-image {
+  width: 100%;
 
-  width:100%;
+  height: 100%;
 
-  height:100%;
-
-  object-fit:cover;
+  object-fit: cover;
 }
 
-/* GLOW */
+/* ================= GLOW ================= */
 
-.profile-glow{
+.profile-glow {
+  position: absolute;
 
-  position:absolute;
+  width: 450px;
 
-  width:450px;
+  height: 450px;
 
-  height:450px;
+  border-radius: 50%;
 
-  border-radius:50%;
+  background: rgba(0,240,255,0.15);
 
-  background:
-  rgba(0,240,255,0.15);
+  filter: blur(100px);
 
-  filter:blur(100px);
-
-  z-index:1;
+  z-index: 1;
 }
 
-/* RESPONSIVE */
+/* ================= LAPTOP ================= */
 
-@media(max-width:1100px){
+@media (max-width: 1200px) {
 
-  .hero{
-
-    flex-direction:column-reverse;
-
-    text-align:center;
-
-    padding-top:180px;
+  .hero-content h1 {
+    font-size: 4.2rem;
   }
 
-  .hero-description{
-
-    margin:auto auto 40px;
-  }
-
-  .hero-buttons{
-
-    justify-content:center;
+  .profile-container {
+    width: 360px;
+    height: 360px;
   }
 
 }
 
-@media(max-width:768px){
+/* ================= TABLET ================= */
 
-  .hero-content h1{
+@media (max-width: 1100px) {
 
-    font-size:3rem;
+  .hero {
+
+    flex-direction: column-reverse;
+
+    text-align: center;
+
+    justify-content: center;
+
+    padding: 150px 6% 70px;
+
+    gap: 50px;
   }
 
-  .typing-text{
-
-    font-size:1.1rem;
+  .hero-content {
+    width: 100%;
   }
 
-  .profile-container{
+  .hero-description {
 
-    width:280px;
+    margin: 0 auto 40px;
 
-    height:280px;
+    max-width: 700px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+  .hero {
+
+    min-height: auto;
+
+    padding: 130px 6% 60px;
+
+    gap: 35px;
+  }
+
+  .hero-subtitle {
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+  }
+
+  .hero-content h1 {
+
+    font-size: 2.7rem;
+
+    line-height: 1.2;
+  }
+
+  .typing-container {
+    margin-bottom: 22px;
+  }
+
+  .typing-text {
+
+    font-size: 1.1rem;
+  }
+
+  .hero-description {
+
+    font-size: 0.95rem;
+
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+  }
+
+  .primary-btn {
+
+    padding: 14px 28px;
+
+    font-size: 0.9rem;
+  }
+
+  .profile-container {
+
+    width: 260px;
+
+    height: 260px;
+  }
+
+  .profile-glow {
+
+    width: 300px;
+
+    height: 300px;
+  }
+
+}
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 480px) {
+
+  .hero {
+
+    padding: 120px 5% 50px;
+  }
+
+  .hero-content h1 {
+
+    font-size: 2.2rem;
+  }
+
+  .typing-text {
+
+    font-size: 1rem;
+  }
+
+  .hero-description {
+
+    font-size: 0.9rem;
+
+    line-height: 1.7;
+  }
+
+  .profile-container {
+
+    width: 220px;
+
+    height: 220px;
+  }
+
+  .profile-glow {
+
+    width: 240px;
+
+    height: 240px;
+  }
+
+  .primary-btn {
+
+    width: 100%;
+
+    max-width: 240px;
+
+    margin: auto;
+  }
+
+  .hero-buttons {
+
+    justify-content: center;
   }
 
 }

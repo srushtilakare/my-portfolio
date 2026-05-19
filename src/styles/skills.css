@@ -1,235 +1,407 @@
-.skills-page {
+/* ================= SKILLS PAGE ================= */
 
-    min-height: 100vh;
-  
-    padding: 140px 5%;
-  
-    overflow: hidden;
-  
-    position: relative;
+.skills-page {
+  min-height: 100vh;
+
+  padding: 140px 5% 100px;
+
+  overflow-x: hidden;
+
+  position: relative;
+}
+
+/* ================= HEADER ================= */
+
+.skills-header {
+  text-align: center;
+
+  margin-bottom: 80px;
+
+  position: relative;
+
+  z-index: 10;
+}
+
+.skills-subtitle {
+  color: var(--primary-color);
+
+  letter-spacing: 3px;
+
+  margin-bottom: 15px;
+
+  font-size: 14px;
+}
+
+.skills-header h1 {
+  font-size: 4rem;
+
+  line-height: 1.2;
+}
+
+/* ================= GALAXY ================= */
+
+.skills-galaxy {
+  position: relative;
+
+  width: 100%;
+
+  max-width: 1200px;
+
+  height: 1200px;
+
+  margin: auto;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+/* ================= CENTER AI ================= */
+
+.center-ai {
+  width: 180px;
+
+  height: 180px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  position: absolute;
+
+  z-index: 20;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(0,240,255,0.3),
+      rgba(123,47,247,0.1)
+    );
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(20px);
+
+  animation: pulseCore 4s infinite;
+}
+
+.center-ai h2 {
+  font-size: 3rem;
+}
+
+.center-glow {
+  position: absolute;
+
+  width: 250px;
+
+  height: 250px;
+
+  background: rgba(0,240,255,0.15);
+
+  border-radius: 50%;
+
+  filter: blur(100px);
+
+  z-index: -1;
+}
+
+/* ================= ORBITS ================= */
+
+.orbit {
+  position: absolute;
+
+  border: 1px dashed rgba(255,255,255,0.08);
+
+  border-radius: 50%;
+}
+
+.orbit-one {
+  width: 400px;
+  height: 400px;
+}
+
+.orbit-two {
+  width: 700px;
+  height: 700px;
+}
+
+.orbit-three {
+  width: 1000px;
+  height: 1000px;
+}
+
+/* ================= ORBIT ITEMS ================= */
+
+.orbit-item {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform-origin: center;
+}
+
+/* ================= SKILL CARD ================= */
+
+.skill-card {
+  width: 130px;
+
+  min-height: 120px;
+
+  padding: 18px;
+
+  border-radius: 20px;
+
+  background: rgba(255,255,255,0.05);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(20px);
+
+  text-align: center;
+
+  transition: 0.4s ease;
+
+  cursor: pointer;
+
+  transform: translate(-50%, -50%);
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+.skill-card:hover {
+  transform:
+    translate(-50%, -50%) scale(1.08);
+
+  border-color: rgba(0,240,255,0.4);
+
+  box-shadow:
+    0 0 30px rgba(0,240,255,0.2);
+}
+
+.skill-icon {
+  font-size: 2rem;
+
+  margin-bottom: 10px;
+
+  color: var(--primary-color);
+}
+
+.skill-card p {
+  font-size: 0.9rem;
+
+  line-height: 1.4;
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes pulseCore {
+
+  0% {
+    transform: scale(1);
   }
-  
-  /* HEADER */
-  
-  .skills-header {
-  
-    text-align: center;
-  
-    margin-bottom: 100px;
+
+  50% {
+    transform: scale(1.05);
   }
-  
-  .skills-subtitle {
-  
-    color: var(--primary-color);
-  
-    letter-spacing: 3px;
-  
-    margin-bottom: 15px;
+
+  100% {
+    transform: scale(1);
   }
-  
-  .skills-header h1 {
-  
-    font-size: 4rem;
-  
-    line-height: 1.2;
-  }
-  
-  /* GALAXY */
-  
+}
+
+/* ================= DESKTOP RESPONSIVE ================= */
+
+@media (max-width: 1200px) {
+
   .skills-galaxy {
-  
-    position: relative;
-  
-    width: 1200px;
-    height: 1200px;
-  
-    margin: auto;
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    transform: scale(0.75);
+
+    height: 900px;
   }
-  
-  /* CENTER */
-  
+
+  .skills-header h1 {
+    font-size: 3.2rem;
+  }
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 992px) {
+
+  .skills-page {
+    padding: 130px 5% 80px;
+  }
+
+  .skills-galaxy {
+    transform: scale(0.58);
+
+    height: 720px;
+  }
+
+  .skills-header h1 {
+    font-size: 2.7rem;
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+  .skills-page {
+    padding: 120px 5% 60px;
+  }
+
+  .skills-header {
+    margin-bottom: 30px;
+  }
+
+  .skills-header h1 {
+    font-size: 2rem;
+
+    line-height: 1.3;
+  }
+
+  .skills-subtitle {
+    font-size: 12px;
+  }
+
+  .skills-galaxy {
+
+    width: 100%;
+
+    height: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 16px;
+
+    justify-items: center;
+
+    align-items: center;
+
+    transform: none;
+  }
+
+  /* REMOVE ORBITS */
+
+  .orbit {
+    display: contents;
+    border: none;
+  }
+
+  /* RESET ORBIT ITEMS */
+
+  .orbit-item {
+    position: relative;
+
+    top: auto;
+    left: auto;
+
+    transform: none !important;
+  }
+
+  /* CENTER AI */
+
   .center-ai {
-  
+    grid-column: 1 / -1;
+
+    position: relative;
+
+    margin-bottom: 20px;
+
+    width: 130px;
+
+    height: 130px;
+  }
+
+  .center-ai h2 {
+    font-size: 2rem;
+  }
+
+  .center-glow {
     width: 180px;
     height: 180px;
-  
-    border-radius: 50%;
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  
-    position: absolute;
-  
-    z-index: 20;
-  
-    background:
-      radial-gradient(
-        circle,
-        rgba(0,240,255,0.3),
-        rgba(123,47,247,0.1)
-      );
-  
-    border: 1px solid rgba(255,255,255,0.08);
-  
-    backdrop-filter: blur(20px);
-  
-    animation: pulseCore 4s infinite;
   }
-  
-  .center-ai h2 {
-  
-    font-size: 3rem;
-  }
-  
-  .center-glow {
-  
-    position: absolute;
-  
-    width: 250px;
-    height: 250px;
-  
-    background: rgba(0,240,255,0.15);
-  
-    border-radius: 50%;
-  
-    filter: blur(100px);
-  
-    z-index: -1;
-  }
-  
-  /* ORBITS */
-  
-  .orbit {
-  
-    position: absolute;
-  
-    border: 1px dashed rgba(255,255,255,0.08);
-  
-    border-radius: 50%;
-  }
-  
-  .orbit-one {
-  
-    width: 400px;
-    height: 400px;
-  }
-  
-  .orbit-two {
-  
-    width: 700px;
-    height: 700px;
-  }
-  
-  .orbit-three {
-  
-    width: 1000px;
-    height: 1000px;
-  }
-  
-  /* ORBIT ITEMS */
-  
-  .orbit-item {
-  
-    position: absolute;
-  
-    top: 50%;
-    left: 50%;
-  
-    transform-origin: center;
-  }
-  
-  /* SKILL CARD */
-  
+
+  /* CARDS */
+
   .skill-card {
-  
-    width: 130px;
-  
-    padding: 18px;
-  
-    border-radius: 20px;
-  
-    background: rgba(255,255,255,0.05);
-  
-    border: 1px solid rgba(255,255,255,0.08);
-  
-    backdrop-filter: blur(20px);
-  
-    text-align: center;
-  
-    transition: 0.4s ease;
-  
-    cursor: pointer;
-  
-    transform:
-      translate(-50%, -50%);
+    width: 100%;
+
+    max-width: 150px;
+
+    min-height: 110px;
+
+    transform: none;
+
+    padding: 16px;
   }
-  
+
   .skill-card:hover {
-  
-    transform:
-      translate(-50%, -50%) scale(1.1);
-  
-    border-color: rgba(0,240,255,0.4);
-  
-    box-shadow:
-      0 0 30px rgba(0,240,255,0.2);
+    transform: translateY(-5px);
   }
-  
+
   .skill-icon {
-  
-    font-size: 2rem;
-  
-    margin-bottom: 10px;
-  
-    color: var(--primary-color);
+    font-size: 1.7rem;
   }
-  
+
   .skill-card p {
-  
-    font-size: 0.9rem;
+    font-size: 0.82rem;
   }
-  
-  /* ANIMATIONS */
-  
-  @keyframes pulseCore {
-  
-    0% {
-      transform: scale(1);
-    }
-  
-    50% {
-      transform: scale(1.05);
-    }
-  
-    100% {
-      transform: scale(1);
-    }
+}
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 480px) {
+
+  .skills-page {
+    padding: 110px 4% 50px;
   }
-  
-  /* RESPONSIVE */
-  
-  @media (max-width: 1200px) {
-  
-    .skills-galaxy {
-  
-      transform: scale(0.7);
-    }
+
+  .skills-header h1 {
+    font-size: 1.7rem;
   }
-  
-  @media (max-width: 768px) {
-  
-    .skills-galaxy {
-  
-      transform: scale(0.45);
-    }
-  
-    .skills-header h1 {
-  
-      font-size: 2.2rem;
-    }
+
+  .skills-galaxy {
+    grid-template-columns: 1fr;
   }
+
+  .center-ai {
+    width: 115px;
+
+    height: 115px;
+  }
+
+  .center-ai h2 {
+    font-size: 1.7rem;
+  }
+
+  .skill-card {
+    max-width: 100%;
+
+    width: 100%;
+  }
+
+  .skill-icon {
+    font-size: 1.5rem;
+  }
+
+  .skill-card p {
+    font-size: 0.8rem;
+  }
+}
