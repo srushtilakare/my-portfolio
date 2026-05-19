@@ -1,5 +1,4 @@
 import "../styles/farmAI.css";
-
 import { motion } from "framer-motion";
 
 /* IMAGES */
@@ -99,9 +98,13 @@ function FarmAISection() {
             y: 20
           }}
 
-          whileInView={{
+          animate={{
             opacity: 1,
             y: 0
+          }}
+
+          transition={{
+            duration: 0.6
           }}
         >
 
@@ -116,9 +119,13 @@ function FarmAISection() {
             y: 30
           }}
 
-          whileInView={{
+          animate={{
             opacity: 1,
             y: 0
+          }}
+
+          transition={{
+            duration: 0.8
           }}
         >
 
@@ -151,29 +158,47 @@ function FarmAISection() {
 
         <div className="farmai-stats">
 
-          <div className="farmai-stat">
+          <motion.div
+            className="farmai-stat"
+
+            whileHover={{
+              y: -5
+            }}
+          >
 
             <h3>14+</h3>
 
             <p>Modules</p>
 
-          </div>
+          </motion.div>
 
-          <div className="farmai-stat">
+          <motion.div
+            className="farmai-stat"
+
+            whileHover={{
+              y: -5
+            }}
+          >
 
             <h3>91%</h3>
 
             <p>AI Accuracy</p>
 
-          </div>
+          </motion.div>
 
-          <div className="farmai-stat">
+          <motion.div
+            className="farmai-stat"
+
+            whileHover={{
+              y: -5
+            }}
+          >
 
             <h3>3</h3>
 
             <p>Languages</p>
 
-          </div>
+          </motion.div>
 
         </div>
 
@@ -181,26 +206,30 @@ function FarmAISection() {
 
         <div className="modules-container">
 
-          {modules.map((module, index) => (
+          {
 
-            <motion.div
+            modules.map((module, index) => (
 
-              className="module-box"
+              <motion.div
 
-              key={index}
+                className="module-box"
 
-              whileHover={{
-                y: -5
-              }}
-            >
+                key={index}
 
-              <div className="module-dot"></div>
+                whileHover={{
+                  y: -5
+                }}
+              >
 
-              <p>{module}</p>
+                <div className="module-dot"></div>
 
-            </motion.div>
+                <p>{module}</p>
 
-          ))}
+              </motion.div>
+
+            ))
+
+          }
 
         </div>
 
@@ -222,27 +251,36 @@ function FarmAISection() {
 
         <div className="image-showcase">
 
-          {screenshots.map((image, index) => (
+          {
 
-            <motion.div
+            screenshots.map((image, index) => (
 
-              className="snapshot-card"
+              <motion.div
 
-              key={index}
+                className="snapshot-card"
 
-              whileHover={{
-                y: -8
-              }}
-            >
+                key={index}
 
-              <img
-                src={image}
-                alt={`FarmAI ${index + 1}`}
-              />
+                whileHover={{
+                  y: -8,
+                  scale: 1.02
+                }}
 
-            </motion.div>
+                transition={{
+                  duration: 0.3
+                }}
+              >
 
-          ))}
+                <img
+                  src={image}
+                  alt={`FarmAI ${index + 1}`}
+                />
+
+              </motion.div>
+
+            ))
+
+          }
 
         </div>
 
