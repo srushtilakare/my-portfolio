@@ -12,7 +12,7 @@ function Navbar() {
         to="/"
         className="nav-logo"
       >
-        Srushti<span>AI</span>
+        Portfolio
       </Link>
 
       <ul className="nav-links">
