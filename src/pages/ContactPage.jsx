@@ -260,8 +260,8 @@ function ContactPage() {
               style={{ display: "none" }}
             />
 
-            {/* RECAPTCHA */}
-
+            {/* RECAPTCHA
+//
             <div className="captcha-box">
 
               <ReCAPTCHA
@@ -273,7 +273,7 @@ function ContactPage() {
                 ref={captchaRef}
               />
 
-            </div>
+            </div> */}
 
             <button
               type="submit"
