@@ -1,8 +1,13 @@
 import "../styles/research.css";
 
+// IMPORT CERTIFICATE IMAGES
+import ieeeCertificate from "../assets/certificates/ieee.png";
+import farmaiCertificate from "../assets/certificates/farmai.png";
+
 const researchPapers = [
   {
     id: 1,
+
     title:
       "Enhancing Trust and Privacy in Edge and Cloud Computing Through Blockchain Technology",
 
@@ -31,6 +36,8 @@ const researchPapers = [
     ],
 
     link: "https://ieeexplore.ieee.org/document/10449566",
+
+    certificate: ieeeCertificate,
 
     glow: "#00f0ff",
   },
@@ -65,7 +72,7 @@ const researchPapers = [
       "Presented on 30 Jan 2026",
     ],
 
-    certificate: "/certificate.jpg",
+    certificate: farmaiCertificate,
 
     glow: "#7b2ff7",
   },
@@ -74,9 +81,11 @@ const researchPapers = [
 function ResearchPage() {
   return (
     <div className="research-page">
+
       <div className="research-stars"></div>
 
       <div className="research-hero">
+
         <p className="research-tag">
           RESEARCH • PUBLICATIONS • INNOVATION
         </p>
@@ -90,9 +99,11 @@ function ResearchPage() {
         <p className="research-subtitle">
           Transforming ideas into impactful research and intelligent systems.
         </p>
+
       </div>
 
       <div className="research-stats">
+
         <div className="research-stat-card">
           <h2>2+</h2>
           <p>Research Works</p>
@@ -112,10 +123,13 @@ function ResearchPage() {
           <h2>AI</h2>
           <p>Research Focus</p>
         </div>
+
       </div>
 
       <div className="research-container">
+
         {researchPapers.map((paper) => (
+
           <div
             className="research-card"
             key={paper.id}
@@ -123,28 +137,46 @@ function ResearchPage() {
               boxShadow: `0 0 40px ${paper.glow}20`,
             }}
           >
-            <div className="research-top">
-              <span className="research-type">{paper.type}</span>
 
-              <span className="research-year">{paper.year}</span>
+            <div className="research-top">
+
+              <span className="research-type">
+                {paper.type}
+              </span>
+
+              <span className="research-year">
+                {paper.year}
+              </span>
+
             </div>
 
             <h2>{paper.title}</h2>
 
-            <p className="research-description">{paper.description}</p>
+            <p className="research-description">
+              {paper.description}
+            </p>
 
             <div className="research-tech">
+
               {paper.tech.map((item, index) => (
-                <span key={index}>{item}</span>
+                <span key={index}>
+                  {item}
+                </span>
               ))}
+
             </div>
 
             <div className="research-achievements">
+
               {paper.achievements.map((item, index) => (
-                <div key={index} className="achievement-card">
+                <div
+                  key={index}
+                  className="achievement-card"
+                >
                   ✨ {item}
                 </div>
               ))}
+
             </div>
 
             {paper.link && (
@@ -159,16 +191,29 @@ function ResearchPage() {
             )}
 
             {paper.certificate && (
+
               <div className="certificate-showcase">
+
+                <h3> <center>
+                  Research Certificate </center>
+                </h3>
+
                 <img
                   src={paper.certificate}
                   alt="Research Certificate"
+                  className="certificate-image"
                 />
+
               </div>
+
             )}
+
           </div>
+
         ))}
+
       </div>
+
     </div>
   );
 }

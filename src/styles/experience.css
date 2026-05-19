@@ -1,0 +1,336 @@
+.experience-section {
+
+    padding: 120px 7%;
+  
+    position: relative;
+  }
+  
+  /* HEADER */
+  
+  .experience-header {
+  
+    text-align: center;
+  
+    margin-bottom: 90px;
+  }
+  
+  .experience-tag {
+  
+    color: #00f0ff;
+  
+    letter-spacing: 3px;
+  
+    margin-bottom: 20px;
+  
+    font-size: 0.9rem;
+  }
+  
+  .experience-header h2 {
+  
+    font-size: 4.5rem;
+  
+    margin-bottom: 25px;
+  
+    line-height: 1;
+  }
+  
+  .experience-subtitle {
+  
+    color: #bcbcbc;
+  
+    max-width: 850px;
+  
+    margin: auto;
+  
+    line-height: 1.8;
+  
+    font-size: 1.1rem;
+  }
+  
+  /* TIMELINE */
+  
+  .timeline {
+  
+    position: relative;
+  
+    display: flex;
+  
+    flex-direction: column;
+  
+    gap: 50px;
+  }
+  
+  .timeline::before {
+  
+    content: "";
+  
+    position: absolute;
+  
+    left: 20px;
+  
+    top: 0;
+  
+    width: 2px;
+  
+    height: 100%;
+  
+    background:
+      linear-gradient(
+        to bottom,
+        #00f0ff,
+        #7b2ff7
+      );
+  }
+  
+  /* CARD */
+  
+  .experience-card {
+  
+    position: relative;
+  
+    padding-left: 80px;
+  }
+  
+  .timeline-dot {
+  
+    position: absolute;
+  
+    left: 8px;
+  
+    top: 40px;
+  
+    width: 25px;
+  
+    height: 25px;
+  
+    border-radius: 50%;
+  
+    background: #00f0ff;
+  
+    box-shadow:
+      0 0 25px #00f0ff;
+  }
+  
+  .timeline-dot.purple {
+  
+    background: #7b2ff7;
+  
+    box-shadow:
+      0 0 25px #7b2ff7;
+  }
+  
+  /* CONTENT */
+  
+  .experience-content {
+  
+    background:
+      rgba(255,255,255,0.04);
+  
+    border:
+      1px solid rgba(255,255,255,0.08);
+  
+    border-radius: 35px;
+  
+    padding: 40px;
+  
+    backdrop-filter: blur(20px);
+  
+    transition: 0.4s ease;
+  }
+  
+  .experience-content:hover {
+  
+    transform: translateY(-8px);
+  
+    border-color:
+      rgba(0,240,255,0.3);
+  }
+  
+  /* TOP */
+  
+  .experience-top {
+  
+    display: flex;
+  
+    justify-content: space-between;
+  
+    gap: 30px;
+  
+    margin-bottom: 30px;
+  }
+  
+  .experience-top h3 {
+  
+    font-size: 2rem;
+  
+    margin-bottom: 10px;
+  }
+  
+  .experience-top span {
+  
+    color: #00f0ff;
+  
+    font-size: 1rem;
+  }
+  
+  .experience-date {
+  
+    color: #999;
+  
+    white-space: nowrap;
+  }
+  
+  /* DESCRIPTION */
+  
+  .experience-description {
+  
+    color: #c7c7c7;
+  
+    line-height: 2;
+  
+    margin-bottom: 35px;
+  
+    font-size: 1.02rem;
+  }
+  
+  /* BLOCK */
+  
+  .experience-block {
+  
+    margin-top: 30px;
+  }
+  
+  .experience-block h4 {
+  
+    margin-bottom: 20px;
+  
+    color: white;
+  
+    font-size: 1.2rem;
+  }
+  
+  /* TAGS */
+  
+  .tags {
+  
+    display: flex;
+  
+    flex-wrap: wrap;
+  
+    gap: 15px;
+  }
+  
+  .tags span {
+  
+    padding: 12px 18px;
+  
+    border-radius: 30px;
+  
+    background:
+      rgba(0,240,255,0.08);
+  
+    border:
+      1px solid rgba(0,240,255,0.15);
+  
+    color: #00f0ff;
+  
+    transition: 0.3s ease;
+  
+    font-size: 0.92rem;
+  }
+  
+  .tags span:hover {
+  
+    transform: translateY(-3px);
+  
+    background:
+      linear-gradient(
+        90deg,
+        rgba(0,240,255,0.2),
+        rgba(123,47,247,0.2)
+      );
+  }
+  
+  /* HIGHLIGHTS */
+  
+  .experience-highlight {
+  
+    display: grid;
+  
+    grid-template-columns:
+      repeat(auto-fit,minmax(260px,1fr));
+  
+    gap: 25px;
+  
+    margin-top: 30px;
+  }
+  
+  .highlight-card {
+  
+    padding: 25px;
+  
+    border-radius: 25px;
+  
+    background:
+      rgba(255,255,255,0.03);
+  
+    border:
+      1px solid rgba(255,255,255,0.06);
+  }
+  
+  .highlight-card h4 {
+  
+    margin-bottom: 15px;
+  
+    color: #7b2ff7;
+  }
+  
+  .highlight-card p {
+  
+    color: #bcbcbc;
+  
+    line-height: 1.8;
+  }
+  
+  /* RESPONSIVE */
+  
+  @media(max-width:900px){
+  
+    .experience-header h2{
+  
+      font-size: 3rem;
+    }
+  
+    .experience-top{
+  
+      flex-direction: column;
+    }
+  
+    .timeline::before{
+  
+      left: 12px;
+    }
+  
+    .timeline-dot{
+  
+      width: 18px;
+      height: 18px;
+  
+      left: 4px;
+    }
+  
+    .experience-card{
+  
+      padding-left: 45px;
+    }
+  
+  }
+  
+  @media(max-width:768px){
+  
+    .experience-content{
+  
+      padding: 28px;
+    }
+  
+  }

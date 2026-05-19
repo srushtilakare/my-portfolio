@@ -4,133 +4,152 @@ import { motion } from "framer-motion";
 
 import { TypeAnimation } from "react-type-animation";
 
+/* YOUR PHOTO */
+
+import profile from "../assets/profile.png";
+
 function Hero() {
+
   return (
+
     <section className="hero">
 
-      {/* LEFT CONTENT */}
+      {/* LEFT SIDE */}
 
       <div className="hero-content">
 
         <motion.p
           className="hero-subtitle"
+
           initial={{ opacity: 0, y: 20 }}
+
           animate={{ opacity: 1, y: 0 }}
+
+          transition={{ duration: 0.6 }}
         >
-          AI ENGINEER • FULL STACK DEVELOPER
+
+          HELLO 👋 I'M
+
         </motion.p>
 
         <motion.h1
+
           initial={{ opacity: 0, y: 30 }}
+
           animate={{ opacity: 1, y: 0 }}
+
+          transition={{ duration: 0.8 }}
         >
-          Building Intelligent
-          <br />
-          Digital Experiences
+
+          Srushti
+          <span> Vijay Lakare</span>
+
         </motion.h1>
+
+        {/* TYPING */}
 
         <div className="typing-container">
 
           <TypeAnimation
+
             sequence={[
-              "AI Systems",
+
+              "AI Engineer",
               1500,
-              "Immersive Interfaces",
+
+              "Full Stack Developer",
               1500,
-              "Machine Learning Solutions",
+
+              "Machine Learning Enthusiast",
               1500,
-              "Future-Ready Products",
+
+              "Research & Innovation Explorer",
               1500,
+
             ]}
-            speed={40}
+
+            speed={50}
+
             repeat={Infinity}
+
             className="typing-text"
           />
 
         </div>
 
+        {/* DESCRIPTION */}
+
         <motion.p
+
           className="hero-description"
+
           initial={{ opacity: 0 }}
+
           animate={{ opacity: 1 }}
+
+          transition={{ delay: 0.5 }}
         >
-          I design futuristic AI-powered systems,
-          immersive interfaces, and intelligent
-          digital experiences that solve real-world problems.
+
+          Passionate about building intelligent AI-powered
+          applications, futuristic interfaces, and real-world
+          technology solutions through Artificial Intelligence,
+          Full Stack Development, and Research Innovation.
+
         </motion.p>
+
+        {/* BUTTONS */}
 
         <div className="hero-buttons">
 
-           
-
-          <button className="primary-btn">
           <a
-  href="/resume.pdf"
-  download="Srushti_Lakare_Resume.pdf"
-  className="resume-btn"
->
-  Download Resume
-</a>
-          </button>
+            href="/resume.pdf"
+            download="Srushti_Lakare_Resume.pdf"
+            className="primary-btn"
+          >
+
+            Download Resume
+
+          </a>
 
         </div>
 
       </div>
 
-      {/* RIGHT SIDE VISUAL */}
+      {/* RIGHT SIDE */}
 
       <div className="hero-visual">
 
-        <div className="orb orb-1"></div>
-        <div className="orb orb-2"></div>
+        {/* PROFILE IMAGE */}
 
-        <div className="glass-card">
+        <motion.div
 
-          <div className="card-top">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+          className="profile-container"
 
-          <div className="card-content">
+          initial={{ opacity: 0, scale: 0.8 }}
 
-            <h3>AI SYSTEM STATUS</h3>
+          animate={{ opacity: 1, scale: 1 }}
 
-            <div className="status">
-              <p>Neural Engine</p>
-              <div className="status-bar">
-                <div className="fill"></div>
-              </div>
-            </div>
+          transition={{ duration: 0.8 }}
+        >
 
-            <div className="status">
-              <p>ML Accuracy</p>
-              <div className="status-bar">
-                <div className="fill fill-2"></div>
-              </div>
-            </div>
+          <img
+            src={profile}
+            alt="Srushti Lakare"
+            className="profile-image"
+          />
 
-            <div className="status">
-              <p>Innovation Level</p>
-              <div className="status-bar">
-                <div className="fill fill-3"></div>
-              </div>
-            </div>
+        </motion.div>
 
-          </div>
+        {/* GLOW */}
 
-        </div>
+        <div className="profile-glow"></div>
 
-      </div>
-
-      {/* SCROLL INDICATOR */}
-
-      <div className="scroll-indicator">
-        <div className="scroll-dot"></div>
       </div>
 
     </section>
+
   );
+
 }
 
 export default Hero;
