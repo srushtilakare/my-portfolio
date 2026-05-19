@@ -61,12 +61,16 @@ function Hero() {
 
         <div className="hero-buttons">
 
-          <button className="primary-btn">
-            Explore Projects
-          </button>
+           
 
-          <button className="secondary-btn">
-            Download Resume
+          <button className="primary-btn">
+          <a
+  href="/resume.pdf"
+  download="Srushti_Lakare_Resume.pdf"
+  className="resume-btn"
+>
+  Download Resume
+</a>
           </button>
 
         </div>

@@ -1,0 +1,240 @@
+.certificates-page {
+    min-height: 100vh;
+    padding: 140px 7%;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .certificates-hero {
+    text-align: center;
+    margin-bottom: 70px;
+  }
+  
+  .certificates-tag {
+    color: #00f0ff;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+  
+  .certificates-hero h1 {
+    font-size: 70px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  
+    background: linear-gradient(to right, #ffffff, #00f0ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .certificates-hero p {
+    color: #b8b8b8;
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.8;
+    font-size: 18px;
+  }
+  
+  .certificates-container {
+    display: grid;
+  
+    grid-template-columns:
+      repeat(auto-fit, minmax(320px, 1fr));
+  
+    gap: 40px;
+  
+    width: 100%;
+  }
+  
+  .certificate-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+  
+    border-radius: 30px;
+  
+    overflow: hidden;
+  
+    backdrop-filter: blur(18px);
+  
+    transition: 0.4s ease;
+  }
+  
+  .certificate-card:hover {
+    transform: translateY(-10px);
+    border-color: #00f0ff;
+    box-shadow: 0 0 40px rgba(0,240,255,0.15);
+  }
+  
+  /* IMAGE */
+  
+  .certificate-image {
+    width: 100%;
+    min-height: 350px;
+  
+    padding: 20px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    background: rgba(255,255,255,0.03);
+  }
+  
+  .certificate-image img {
+    max-width: 100%;
+    max-height: 100%;
+  
+    width: auto;
+    height: auto;
+  
+    object-fit: contain;
+  
+    border-radius: 12px;
+  }
+  .certificate-image:hover img {
+    transform: scale(1.03);
+  }
+  
+  .certificate-content {
+    padding: 30px;
+  }
+  
+  .certificate-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .certificate-category {
+    background: rgba(0,240,255,0.15);
+    color: #00f0ff;
+  
+    padding: 8px 18px;
+  
+    border-radius: 30px;
+    font-size: 14px;
+  }
+  
+  .certificate-year {
+    color: #9f9f9f;
+  }
+  
+  .certificate-content h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+    color: white;
+  }
+  
+  .certificate-badge {
+    display: inline-block;
+  
+    background: linear-gradient(90deg, #00f0ff, #7b2ff7);
+  
+    color: white;
+  
+    padding: 10px 20px;
+  
+    border-radius: 30px;
+  
+    margin-bottom: 20px;
+  
+    font-size: 14px;
+  }
+  
+  .certificate-content p {
+    color: #b8b8b8;
+    line-height: 1.8;
+    margin-bottom: 25px;
+  }
+  
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 30px;
+  }
+  
+  .skill-tag {
+    background: rgba(255,255,255,0.06);
+  
+    border: 1px solid rgba(255,255,255,0.08);
+  
+    color: white;
+  
+    padding: 8px 14px;
+  
+    border-radius: 20px;
+  
+    font-size: 13px;
+  }
+  
+  .view-btn {
+    display: inline-block;
+  
+    padding: 12px 25px;
+  
+    background: linear-gradient(90deg, #00f0ff, #7b2ff7);
+  
+    border-radius: 30px;
+  
+    color: white;
+    text-decoration: none;
+  
+    transition: 0.3s ease;
+  }
+  
+  .view-btn:hover {
+    transform: scale(1.05);
+  }
+  
+  /* FEATURED */
+  
+  .featured-card {
+    border: 1px solid rgba(0,240,255,0.25);
+  }
+  
+  /* POPUP */
+  
+  .image-popup {
+    position: fixed;
+    inset: 0;
+  
+    background: rgba(0,0,0,0.92);
+  
+    z-index: 9999;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    padding: 30px;
+  }
+  
+  .image-popup img {
+    max-width: 95%;
+    max-height: 95%;
+  
+    object-fit: contain;
+  
+    border-radius: 20px;
+  
+    box-shadow: 0 0 40px rgba(0,240,255,0.25);
+  }
+  
+  /* RESPONSIVE */
+  
+  @media(max-width: 768px) {
+  
+    .certificates-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .certificate-content h2 {
+      font-size: 28px;
+    }
+  
+    .certificates-hero h1 {
+      font-size: 45px;
+    }
+  
+  }
