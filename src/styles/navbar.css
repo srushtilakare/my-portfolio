@@ -1,107 +1,119 @@
+/* ================= NAVBAR ================= */
+
 .navbar {
   width: 100%;
-  padding: 20px 5%; /* Slightly reduced top/bottom padding for a cleaner look */
+  padding: 20px 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   position: fixed;
   top: 0;
+  left: 0;
+
   z-index: 1000;
+
   backdrop-filter: blur(10px);
-  background: rgba(5, 8, 22, 0.7); /* Slightly increased opacity so text behind it doesn't bleed through while scrolling */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  background: rgba(5, 8, 22, 0.4);
+
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
+
+/* LOGO */
 
 .nav-logo {
   font-size: 1.5rem;
   font-weight: 700;
   cursor: pointer;
-  z-index: 1001; /* Keeps logo above the mobile menu overlay */
+  white-space: nowrap;
 }
 
 .nav-logo span {
   color: var(--primary-color);
 }
 
+/* LINKS */
+
 .nav-links {
   display: flex;
-  gap: 40px;
   align-items: center;
+  gap: 40px;
+
+  list-style: none;
+  flex-wrap: wrap;
 }
 
 .nav-links li {
   cursor: pointer;
   transition: var(--transition);
   color: var(--gray-text);
-  font-weight: 500;
+
+  font-size: 1rem;
 }
 
 .nav-links li:hover {
   color: var(--primary-color);
 }
 
-/* HAMBURGER MENU BUTTON (Hidden on Desktop) */
-.menu-btn {
-  display: none;
-  flex-direction: column;
-  gap: 6px;
-  cursor: pointer;
-  z-index: 1001; /* Keeps the button clickable over the overlay */
-  background: none;
-  border: none;
-}
+/* ================= TABLET ================= */
 
-.menu-btn span {
-  display: block;
-  width: 30px;
-  height: 3px;
-  background-color: var(--text-color);
-  border-radius: 3px;
-  transition: var(--transition);
-}
-
-/* --- RESPONSIVE MEDIA QUERY --- */
-
-@media (max-width: 768px) {
-  /* Turn the hamburger icon visible */
-  .menu-btn {
-    display: flex;
+@media (max-width: 992px) {
+  .navbar {
+    padding: 18px 5%;
   }
 
-  /* Transform the horizontal links into a clean full-screen mobile menu dropdown */
   .nav-links {
-    position: fixed;
-    top: 0;
-    right: -100%; /* Hides it off-screen by default */
-    width: 70%; /* Takes up 70% of screen width when open */
-    height: 100vh;
-    background: rgba(5, 8, 22, 0.98); /* Solid dark glass background */
-    backdrop-filter: blur(20px);
-    flex-direction: column;
-    justify-content: center;
-    gap: 35px;
-    transition: 0.4s ease-in-out;
-    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
-    border-left: 1px solid rgba(255, 255, 255, 0.05);
+    gap: 25px;
   }
 
-  /* When the 'active' class is triggered via JavaScript/React state, slide it into view */
-  .nav-links.active {
-    right: 0;
+  .nav-logo {
+    font-size: 1.3rem;
   }
 
   .nav-links li {
-    font-size: 1.3rem; /* Larger touch targets for fingers */
+    font-size: 0.95rem;
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 5%;
   }
 
-  /* Optional: Animate hamburger lines into an 'X' when active */
-  .menu-btn.active span:nth-child(1) {
-    transform: rotate(45deg) translate(6px, 6px);
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    gap: 18px;
+
+    flex-wrap: wrap;
   }
-  .menu-btn.active span:nth-child(2) {
-    opacity: 0;
+
+  .nav-links li {
+    font-size: 0.9rem;
   }
-  .menu-btn.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 12px 4%;
+  }
+
+  .nav-logo {
+    font-size: 1.1rem;
+  }
+
+  .nav-links {
+    gap: 12px;
+  }
+
+  .nav-links li {
+    font-size: 0.82rem;
   }
 }
