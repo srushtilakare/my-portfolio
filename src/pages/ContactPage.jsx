@@ -1,6 +1,10 @@
 import "../styles/contact.css";
-import { useRef } from "react";
+
+import { useRef, useState } from "react";
+
 import emailjs from "@emailjs/browser";
+
+import ReCAPTCHA from "react-google-recaptcha";
 
 import {
   FaGithub,
@@ -13,16 +17,48 @@ function ContactPage() {
 
   const form = useRef();
 
+  const captchaRef = useRef(null);
+
+  const [isVerified, setIsVerified] = useState(false);
+
+  const [isSending, setIsSending] = useState(false);
+
+  const handleCaptcha = (value) => {
+
+    if (value) {
+
+      setIsVerified(true);
+
+    } else {
+
+      setIsVerified(false);
+
+    }
+
+  };
+
   const sendEmail = (e) => {
 
     e.preventDefault();
 
+    if (!isVerified) {
+
+      alert("Please verify reCAPTCHA");
+
+      return;
+
+    }
+
+    if (isSending) return;
+
+    setIsSending(true);
+
     emailjs
       .sendForm(
-        "service_7o4d92p",
-        "template_7pbxhfx",
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         form.current,
-        "PT6VLj81L7wOznSG2"
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
 
       .then(
@@ -31,6 +67,13 @@ function ContactPage() {
           alert("Message Sent Successfully 🚀");
 
           form.current.reset();
+
+          captchaRef.current.reset();
+
+          setIsVerified(false);
+
+          setIsSending(false);
+
         },
 
         (error) => {
@@ -38,6 +81,9 @@ function ContactPage() {
           console.log(error.text);
 
           alert("Something went wrong ❌");
+
+          setIsSending(false);
+
         }
       );
   };
@@ -47,6 +93,8 @@ function ContactPage() {
     <div className="contact-page">
 
       <div className="contact-grid"></div>
+
+      {/* HERO */}
 
       <div className="contact-hero">
 
@@ -61,14 +109,20 @@ function ContactPage() {
         </h1>
 
         <p className="contact-subtitle">
-          Open to AI, Full Stack, Research, and innovative collaboration opportunities.
+
+          Open to AI, Full Stack, Research,
+          Internship, and innovative
+          collaboration opportunities.
+
         </p>
 
       </div>
 
+      {/* MAIN */}
+
       <div className="contact-container">
 
-        {/* LEFT SIDE */}
+        {/* LEFT */}
 
         <div className="contact-info">
 
@@ -154,15 +208,21 @@ function ContactPage() {
 
         </div>
 
-        {/* RIGHT SIDE */}
+        {/* RIGHT */}
 
         <div className="contact-box">
 
-          <h2>Quick Connect 🚀</h2>
+          <h2>
+            Quick Connect 🚀
+          </h2>
 
           <p>
-            Interested in AI projects, research collaborations,
-            internships, or full-stack development opportunities?
+
+            Interested in AI projects,
+            research collaborations,
+            internships, or full-stack
+            development opportunities?
+
           </p>
 
           <form
@@ -192,8 +252,40 @@ function ContactPage() {
               required
             ></textarea>
 
-            <button type="submit">
-              Send Message →
+            {/* HONEYPOT */}
+
+            <input
+              type="text"
+              name="hidden_field"
+              style={{ display: "none" }}
+            />
+
+            {/* RECAPTCHA */}
+
+            <div className="captcha-box">
+
+              <ReCAPTCHA
+                sitekey={
+                  import.meta.env
+                    .VITE_RECAPTCHA_SITE_KEY
+                }
+                onChange={handleCaptcha}
+                ref={captchaRef}
+              />
+
+            </div>
+
+            <button
+              type="submit"
+              disabled={isSending}
+            >
+
+              {
+                isSending
+                  ? "Sending..."
+                  : "Send Message →"
+              }
+
             </button>
 
           </form>
